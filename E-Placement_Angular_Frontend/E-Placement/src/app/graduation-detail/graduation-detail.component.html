@@ -1,0 +1,49 @@
+<p  *ngIf="msg" class="errors">{{msg}}</p>
+<div class="example-container">
+  <div class="form-container">
+    <h1 aling="center">Graduation Details</h1>
+      <form action="">
+        
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>CollegeName</mat-label>
+          <input matInput placeholder="collegeName" required name="collegeName" ngModel #schoolName="ngModel" [(ngModel)]="collegeName">
+          <mat-icon matSuffix>collegeName</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Degree</mat-label>
+            <mat-select [(ngModel)]="selected" name="degree">
+              <mat-option *ngFor="let degree of degrees" [value]="degree.value">
+                {{degree.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Percentage</mat-label>
+            <input matInput placeholder="Percentage" type="number" required name="percentage"  ngModel #percentage="ngModel" [(ngModel)]="per">
+              <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>PassingYear</mat-label>
+              <input matInput placeholder="passingYear" type="number" required name="passingYear"  ngModel #passingYear="ngModel" [(ngModel)]="pass">
+                <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Stream</mat-label>
+            <mat-select [(ngModel)]="stream" name="stream">
+              <mat-option *ngFor="let stream of streams" [value]="stream.value">
+                {{stream.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>University</mat-label>
+            <input matInput placeholder="university" required name="university" ngModel #schoolName="ngModel" [(ngModel)]="uname">
+            <mat-icon matSuffix>university</mat-icon>
+          </mat-form-field>
+
+        <button mat-raised-button  class="login-button" (click)="add()">add</button>
+        <button mat-raised-button  class="login-button" (click)="next()">next</button>
+      </form>
+
+    </div>
+  </div>

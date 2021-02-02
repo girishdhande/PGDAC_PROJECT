@@ -1,0 +1,44 @@
+<p>drive-company works!</p>
+<!DOCTYPE html>
+<html>
+<title>Administration Of E-Placement System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif};
+</style>
+<body>
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+        <span class="w3-bar-item w3-left" >Administration Of E-Placement System</span>
+        <span class="w3-bar-item w3-right" >Back</span>
+      </div>
+<div class="w3-container"><br>
+  <h1 class="w3-red">Campus Drive Details</h1><br>
+
+        <p>DriveId:  {{drive.driveId}}</p>
+        <p>DriveDate:   {{drive.driveDate}}</p>
+        <p>Time:   {{drive.time}}</p>
+        <p>Venue:  {{drive.venue}}</p>
+    </div>
+    <div class="w3-container"><br>
+        <h1 class="w3-red">Job Details</h1><br>
+        <div *ngFor="let job of jobs  | async">
+          <p>jobId: &nbsp;&nbsp;&nbsp;             {{job.jobId}}</p>
+          <p>Designation :  &nbsp;&nbsp;&nbsp;        {{job.designation}}</p>
+          <p>Role Responsibility:  &nbsp;&nbsp;&nbsp;          {{job.responsibility}}</p>
+          <p>Required Skill:  &nbsp;&nbsp;&nbsp;         {{job.skill}}</p>
+          <p>Required Experience:  &nbsp;&nbsp;&nbsp;          {{job.experience}} </p>
+          <p>Technology: &nbsp;&nbsp;&nbsp;      {{job.technology}}</p>
+          <p>Salary:   &nbsp;&nbsp;&nbsp;        {{job.salary}} </p>
+          <p>Location:    &nbsp;&nbsp;&nbsp;        {{job.location}}</p>
+        </div>
+      </div>
+    
+
+
+</body>
+</html>

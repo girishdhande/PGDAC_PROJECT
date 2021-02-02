@@ -1,0 +1,38 @@
+<p  *ngIf="msg" class="errors">{{msg}}</p>
+<div class="example-container">
+  <div class="form-container">
+    <h1 aling="center" >Personal Details</h1>
+      <form action="">
+        <mat-form-field class="form-field" appearance="outline" >
+          <mat-label>DateOfBirth</mat-label>
+          <input matInput placeholder="DateOfBirth" type="date"  required name="DateOfBirth" ngModel #username="ngModel" [(ngModel)]="DOB">
+          <mat-icon matSuffix>perm_identity</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Hobbies</mat-label>
+          <input matInput placeholder="hobbies" required name="hobbies" ngModel #email="ngModel" [(ngModel)]="hob">
+          <mat-icon matSuffix>hobbies</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>MobileNo</mat-label>
+          <input matInput placeholder="mobileNo" type="text" required  minlength="10" name="mobileNo" ngModel #mobileNo="ngModel" [(ngModel)]="mob">
+            <mat-error *ngIf="mobileNo.errors && mobileNo.errors.required">mobileNo is required</mat-error>
+            <mat-error *ngIf="mobileNo.errors && mobileNo.errors.minlength">Password must be of length 6</mat-error>
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>KnownLanguages</mat-label>
+            <input matInput placeholder="knownLanguages"  required name="knownLanguages"  ngModel #knownLanguages="ngModel" [(ngModel)]="kL">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Address</mat-label>
+            <textarea input matInput placeholder="address" type="text" required name="address"  ngModel #knownLanguages="ngModel" [(ngModel)]="add">
+            </textarea>
+              <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="login-button" (click)="next()">next</button>
+      </form>
+
+    </div>
+  </div>

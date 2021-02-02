@@ -1,0 +1,31 @@
+<p  *ngIf="msg" class="errors">{{msg}}</p>
+<div class="example-container">
+  <div class="form-container">
+    <h1 aling="center">HSC School Details</h1>
+      <form action="">
+        
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>SchoolName</mat-label>
+          <input matInput placeholder="schoolName" required name="schoolName" ngModel #schoolName="ngModel" [(ngModel)]="sname">
+          <mat-icon matSuffix>schoolName</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Board</mat-label>
+            <input matInput placeholder="board"  required name="board"  ngModel #knownLanguages="ngModel" [(ngModel)]="bo">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Percentage</mat-label>
+            <input matInput placeholder="Percentage" type="number" required name="percentage"  ngModel #percentage="ngModel" [(ngModel)]="per">
+              <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>PassingYear</mat-label>
+              <input matInput placeholder="passingYear" type="number" required name="passingYear"  ngModel #passingYear="ngModel" [(ngModel)]="pass">
+                <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field>
+        <button mat-raised-button color="primary" class="login-button" (click)="next()">next</button>
+      </form>
+
+    </div>
+  </div>

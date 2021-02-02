@@ -1,0 +1,31 @@
+<p  *ngIf="msg" class="errors">{{msg}}</p>
+<div class="example-container">
+  <div class="form-container">
+    <h1 aling="center">Project Details</h1>
+      <form action="">
+        
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>ProjectName</mat-label>
+          <input matInput placeholder="projectName" required name="projectName" ngModel #schoolName="ngModel" [(ngModel)]="title">
+          <mat-icon matSuffix>projectName</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>ProjectType</mat-label>
+            <mat-select [(ngModel)]="type" name="type">
+              <mat-option *ngFor="let type of types" [value]="type.value">
+                {{type.viewValue}}
+              </mat-option>
+            </mat-select>
+         </mat-form-field>
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Description</mat-label>
+              <textarea input matInput placeholder="description" type="text" required name="description"  ngModel #knownLanguages="ngModel" [(ngModel)]="d">
+              </textarea>
+                
+          </mat-form-field>
+        <button mat-raised-button  class="login-button" (click)="add()">add</button>
+        <button mat-raised-button  class="login-button" (click)="next()">next</button>
+      </form>
+
+    </div>
+  </div>

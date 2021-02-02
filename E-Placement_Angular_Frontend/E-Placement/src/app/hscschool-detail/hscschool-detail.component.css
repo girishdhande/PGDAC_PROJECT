@@ -1,0 +1,55 @@
+.login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #0eb0b6;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  mat-card {
+    width: 30%;
+    margin: 10% auto;
+    border-radius: 8px;
+  }
+  mat-form-field, mat-checkbox {
+    width: 50%;
+    display: block;
+    margin: 2%;
+    margin-left:20%;
+    
+  }
+  mat-card-content {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width:10%;
+    margin: 20px auto;
+    background-color: #ee351c;
+  }
+  
+
+h1{
+    color: #0c0b0b;
+    font-family: arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px auto;
+    margin-bottom: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    margin-left:20%;  
+    margin-top: 2%;
+}
+    
+  

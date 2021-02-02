@@ -1,0 +1,47 @@
+<p>drive-company works!</p>
+<!DOCTYPE html>
+<html>
+<title>Administration Of E-Placement System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif};
+</style>
+<body>
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+        <span class="w3-bar-item w3-left" ><title>Administration Of E-Placement System</title>
+        </span>
+        <span class="w3-bar-item w3-right" (click)="Logout()">Back</span>
+      </div>
+<div class="w3-container"><br>
+  <h1>Campus Drive Details</h1><br>
+  <table class="w3-table w3-striped w3-border">
+    <thead>
+      <tr class="w3-red">
+        <th>DriveId</th>
+        <th>jobId</th>
+        <th>Designation</th>
+        <th>Technology</th>
+        <th>Salary</th>
+        <th>Location</th>
+        <th>Give Feedback</th>
+      </tr>
+    </thead>
+  <tr *ngFor="let job of jobs  | async">
+    <td>{{job.drive.driveId}}</td>
+    <td>{{job.jobId}}</td>
+    <td>{{job.designation}}</td>
+    <th>{{job.technology}}</th>
+    <td>{{job.salary}}</td>
+    <td> {{job.location}}</td>
+    <td><button (click)="getStudentList(job.jobId)" mat-raised-button  class="w3-red">Give Feedback</button></td>
+  </tr>
+  </table>
+</div>
+
+</body>
+</html>

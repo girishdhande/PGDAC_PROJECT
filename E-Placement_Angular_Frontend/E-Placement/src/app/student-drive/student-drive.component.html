@@ -1,0 +1,42 @@
+<p>drive-company works!</p>
+<!DOCTYPE html>
+<html>
+<title>Online Automated Placement Management System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif};
+</style>
+<body>
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+        <span class="w3-bar-item w3-left" >Online Automated Placement Management System</span>
+        <span class="w3-bar-item w3-right" (click)="Logout()">Back</span>
+      </div>
+<div class="w3-container"><br>
+  <h1>Campus Drive Details</h1><br>
+  <table class="w3-table w3-striped w3-border">
+    <thead>
+      <tr class="w3-red">
+        <th>DriveId</th>
+        <th>DriveDate</th>
+        <th>Time</th>
+        <th>Venue</th>
+        <th>View Details</th>
+      </tr>
+    </thead>
+  <tr *ngFor="let drive of drives | async">
+    <td>{{drive.driveId}}</td>
+    <td>{{drive.driveDate}}</td>
+    <td>{{drive.time}}</td>
+    <td>{{drive.venue}}</td>
+    <td><button (click)="viewJob(drive.driveId)" mat-raised-button  class="w3-red">View</button></td>
+  </tr>
+  </table>
+</div>
+
+</body>
+</html>
